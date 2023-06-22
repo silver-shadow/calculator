@@ -18,3 +18,8 @@ body{
     display: flex;
     flex-direction: column;
 }
+
+.display{
+    border: 1px;
+    border-style: solid;
+}
