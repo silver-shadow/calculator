@@ -89,6 +89,11 @@ function displayContent(key)
         {
             display.textContent = display.textContent + key;
         }
+        else if(key === "AC")
+        {
+            display.textContent = "0";
+            n1 = null,n2 = null,op="",opCheck=false,equalsPressed=false;
+        }
         else if(key === "=")
         {
             equalsPressed = true;
