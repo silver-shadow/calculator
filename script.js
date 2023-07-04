@@ -94,6 +94,10 @@ function displayContent(key)
             display.textContent = "0";
             n1 = null,n2 = null,op="",opCheck=false,equalsPressed=false;
         }
+        else if(key === "DEL")
+        {
+            display.textContent = display.textContent.slice(0,-1);
+        }
         else if(key === "=")
         {
             equalsPressed = true;
