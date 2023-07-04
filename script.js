@@ -85,6 +85,10 @@ function displayContent(key)
             }
             op = key;
         }
+        else if(key === ".")
+        {
+            display.textContent = display.textContent + key;
+        }
         else if(key === "=")
         {
             equalsPressed = true;
