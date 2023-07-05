@@ -40,7 +40,7 @@ function operate(op,n1,n2)
     }
 }
 
-let n1 = null,n2 = null,op,opCheck=false,equalsPressed=false;
+let n1 = null,n2 = null,op,opCheck=false,equalsPressed=false,decPressed=false;
 
 function displayContent(key)
 {
@@ -99,15 +99,17 @@ function displayContent(key)
                 // display.textContent = n2;
             }
             op = key;
+            decPressed = false;
         }
-        else if(key === ".")
+        else if(key === "." && decPressed === false)
         {
             display.textContent = display.textContent + key;
+            decPressed = true;
         }
         else if(key === "AC")
         {
             display.textContent = "0";
-            n1 = null,n2 = null,op="",opCheck=false,equalsPressed=false;
+            n1 = null,n2 = null,op="",opCheck=false,equalsPressed=false,decPressed=false;
         }
         else if(key === "DEL")
         {
