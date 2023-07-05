@@ -85,6 +85,7 @@ function displayContent(key)
                 //n2 = display.textContent;
                 if(!equalsPressed)
                 {
+                    console.log("in if equals pressed");
                     n1 = display.textContent;
                     if(op === '/' && n1 === '0' )
                     {
@@ -96,6 +97,11 @@ function displayContent(key)
                         display.textContent = n2;
                     }
                     
+                }
+                else
+                {
+                    console.log("in else equals pressed");
+                    n2 = display.textContent;
                 }
                 opCheck = true;
                 // n2 = operate(op, n2, n1); 
@@ -147,6 +153,7 @@ function displayContent(key)
                 {
                     n2 = operate(op,n2,n1);
                     display.textContent = n2;
+                    //n1 = null;
                     opCheck = true;
                 } 
             }
