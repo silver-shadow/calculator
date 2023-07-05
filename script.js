@@ -63,11 +63,18 @@ function displayContent(key)
                 {
                     n1 = display.textContent;
                 }
-                console.log(n1,"is n1");
-                n2 = operate(op,n2,n1);
-                display.textContent = n2;
-                opCheck = true;
-                equalsPressed = false;
+                if(op !== '/' && n1 !== '0' )
+                {
+                    console.log(n1,"is n1");
+                    n2 = operate(op,n2,n1);
+                    display.textContent = n2;
+                    opCheck = true;
+                    equalsPressed = false;
+                }
+                else
+                {
+                    display.textContent = "not possible69";
+                }
             }
             else
             {
@@ -76,8 +83,16 @@ function displayContent(key)
                 if(!equalsPressed)
                 {
                     n1 = display.textContent;
-                    n2 = operate(op,n2,n1);
-                    display.textContent = n2;
+                    if(op !== '/' && n1 !== '0' )
+                    {
+                        n2 = operate(op,n2,n1);
+                        display.textContent = n2;
+                    }
+                    else
+                    {
+                        display.textContent = "not possible5";
+                    }
+                    
                 }
                 opCheck = true;
                 // n2 = operate(op, n2, n1); 
@@ -104,17 +119,31 @@ function displayContent(key)
             console.log("pressed equals");
             if (n1 !== null && n2 !== null) {
                 n1 = display.textContent;
-                n2 = operate(op, n2, n1);
-                display.textContent = n2;
-                n1 = null;
-                opCheck = true;
+                if(op !== '/' && n1 !== '0' )
+                {
+                    n2 = operate(op, n2, n1);
+                    display.textContent = n2;
+                    n1 = null;
+                    opCheck = true;
+                }
+                else
+                {
+                    display.textContent = "not possible1";
+                }
             }
             else
             {
                 n1 = display.textContent;
-                n2 = operate(op,n2,n1);
-                display.textContent = n2;
-                opCheck = true;
+                if(op !== '/' && n1 !== '0' )
+                {
+                    n2 = operate(op,n2,n1);
+                    display.textContent = n2;
+                    opCheck = true;
+                }
+                else
+                {
+                    display.textContent = "not possible2";
+                } 
             }
         }
     }
