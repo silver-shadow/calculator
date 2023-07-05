@@ -18,25 +18,28 @@ function divide(a,b)
     return (a/b);
 }
 
+function roundResult(result) {
+    return Math.round((result + Number.EPSILON) * 100) / 100;
+}
 
 function operate(op,n1,n2)
 {   
     if(op === "+")
     {
         //console.log(n1);
-        return add(Number(n1),Number(n2));
+        return roundResult(add(Number(n1), Number(n2)));
     }
     else if(op === "-")
     {
-        return subtract(Number(n1),Number(n2));
+        return roundResult(subtract(Number(n1),Number(n2)));
     }
     else if(op === "*")
     {
-        return multiply(Number(n1),Number(n2));
+        return roundResult(multiply(Number(n1),Number(n2)));
     }
     else if(op === "/")
     {
-        return divide(Number(n1),Number(n2));
+        return roundResult(divide(Number(n1),Number(n2)));
     }
 }
 
