@@ -168,7 +168,12 @@ function displayContent(key)
             //console.log(display.textContent);
             opCheck=false;
         }
+        if(display.textContent.length>9)
+        {
+            display.textContent=display.textContent.slice(0,9);
+        }
         display.textContent = display.textContent + key;
+        console.log(display.textContent.length);
     }
 }
 function pressKey()
